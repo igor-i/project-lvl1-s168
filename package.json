@@ -1,6 +1,6 @@
 {
   "name": "igor-i-brain-games",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "This is a Level 1 project in Hexlet.io",
   "main": "dist/index.js",
   "bin": {
@@ -32,13 +32,11 @@
     "babel-cli": "*",
     "babel-core": "*",
     "babel-eslint": "*",
-    "babel-plugin-transform-runtime": "*",
     "babel-preset-env": "*",
     "babel-preset-stage-0": "*",
     "debug": "*",
-    "eslint": "^4.10.0",
-    "eslint-config-airbnb-base": "*",
-    "eslint-plugin-import": "*",
-    "eslint-plugin-jest": "*"
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
   }
 }

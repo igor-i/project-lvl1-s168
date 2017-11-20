@@ -7,5 +7,8 @@ start:
 publish:
 	npm publish
 
+lint:
+	npm run eslint .
+
 github:
 	git push -u origin master
