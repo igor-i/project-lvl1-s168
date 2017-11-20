@@ -1,10 +1,11 @@
 {
   "name": "igor-i-brain-games",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "This is a Level 1 project in Hexlet.io",
   "main": "dist/index.js",
   "bin": {
-    "brain-games": "dist/bin/brain-games.js"
+    "brain-games": "dist/bin/brain-games.js",
+    "brain-even": "dist/bin/brain-even.js"
   },
   "files": [
     "dist"
