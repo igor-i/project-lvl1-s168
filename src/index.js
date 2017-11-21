@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 
 const normalize = str => str.trim().toLowerCase();
 
-export default (description = '', question = '', correctAnswer = '') => {
+export default (description, question, correctAnswer) => {
   console.log('Welcome to the Brain Games!');
   console.log(`${description}`);
   const userName = readlineSync.question('May I have your name? ');
