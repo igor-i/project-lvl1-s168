@@ -1,4 +1,5 @@
-import gamePlay from './';
+import gamePlay from '..';
+import getRandomInt from './../lib';
 
 const description = 'What is the result of the expression?';
 const minNum = 1;
@@ -18,8 +19,6 @@ const calc = (num1, num2, operation) => {
       return false;
   }
 };
-
-const getRandomInt = (min = 1, max = 3) => Math.floor(Math.random() * (max - min)) + min;
 
 const question = () => {
   const num1 = getRandomInt(minNum, maxNum);
