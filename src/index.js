@@ -2,7 +2,10 @@ import readlineSync from 'readline-sync';
 
 const numberOfIters = 3;
 
-const normalize = str => str.trim().toLowerCase();
+const normalize = (str) => {
+  const s = String(str);
+  return s.trim().toLowerCase();
+};
 // const objToJsonStr = obj => JSON.stringify(obj); // для отладки
 
 export default (description, itemCaseGenerator) => {
@@ -19,7 +22,7 @@ export default (description, itemCaseGenerator) => {
     }
     console.log(`Question: ${itemCase.question}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    if (itemCase.answer === normalize(userAnswer)) {
+    if (normalize(itemCase.answer) === normalize(userAnswer)) {
       console.log('Correct!');
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${itemCase.answer}'`);
