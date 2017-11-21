@@ -1,27 +1,34 @@
 import readlineSync from 'readline-sync';
 
-const normalize = str => str.trim().toLowerCase();
+const numberOfIters = 3;
 
-export default (description, question, correctAnswer) => {
+const normalize = str => str.trim().toLowerCase();
+// const objToJsonStr = obj => JSON.stringify(obj); // для отладки
+
+export default (description, itemCaseGenerator) => {
   console.log('Welcome to the Brain Games!');
   console.log(`${description}`);
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
 
-  for (let i = 0; i < 3; i += 1) {
-    const q = question();
-    const a = correctAnswer(q);
-    console.log(`Question: ${q}`);
-    const answer = readlineSync.question('Your answer: ');
-    if (a === normalize(answer)) {
+  const iter = (count) => {
+    const itemCase = itemCaseGenerator();
+    if (count === numberOfIters) {
+      console.log(`Congratulations, ${userName}!`);
+      return true;
+    }
+    console.log(`Question: ${itemCase.question}`);
+    const userAnswer = readlineSync.question('Your answer: ');
+    if (itemCase.answer === normalize(userAnswer)) {
       console.log('Correct!');
     } else {
-      console.log(`${answer} is wrong answer ;(. Correct answer was ${a}`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${itemCase.answer}'`);
       console.log(`Let's try again, ${userName}!`);
       return true;
     }
-  }
 
-  console.log(`Congratulations, ${userName}!`);
-  return true;
+    return iter(count + 1);
+  };
+
+  return iter(0);
 };

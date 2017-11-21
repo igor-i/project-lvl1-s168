@@ -8,6 +8,15 @@ const isEven = num => (num % 2) === 0;
 const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
 const question = () => getRandomInt(minNum, maxNum);
-const correctAnswer = num => (isEven(num) ? 'yes' : 'no');
+const answer = num => (isEven(num) ? 'yes' : 'no');
 
-export default () => gamePlay(description, question, correctAnswer);
+const itemCaseGenerator = () => {
+  const q = question();
+  const a = answer(q);
+  return {
+    question: q,
+    answer: a,
+  };
+};
+
+export default () => gamePlay(description, itemCaseGenerator);
