@@ -2,14 +2,14 @@ import readlineSync from 'readline-sync';
 
 const normalize = str => str.trim().toLowerCase();
 
-export default (description = '', quest = '', correctAnswer = '') => {
+export default (description = '', question = '', correctAnswer = '') => {
   console.log('Welcome to the Brain Games!');
   console.log(`${description}`);
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
 
   for (let i = 0; i < 3; i += 1) {
-    const q = quest();
+    const q = question();
     const a = correctAnswer(q);
     console.log(`Question: ${q}`);
     const answer = readlineSync.question('Your answer: ');
