@@ -1,4 +1,4 @@
-import gamePlay from '..';
+import gamePlay from './';
 
 const description = 'Answer "yes" if number even otherwise answer "no".';
 const minNum = 1;
