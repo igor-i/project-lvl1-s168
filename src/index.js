@@ -6,7 +6,6 @@ const normalize = (str) => {
   const s = String(str);
   return s.trim().toLowerCase();
 };
-// const objToJsonStr = obj => JSON.stringify(obj); // для отладки
 
 export default (description, itemCaseGenerator) => {
   console.log('Welcome to the Brain Games!');
@@ -15,11 +14,11 @@ export default (description, itemCaseGenerator) => {
   console.log(`Hello, ${userName}!`);
 
   const iter = (count) => {
-    const itemCase = itemCaseGenerator();
     if (count === numberOfIters) {
       console.log(`Congratulations, ${userName}!`);
       return true;
     }
+    const itemCase = itemCaseGenerator();
     console.log(`Question: ${itemCase.question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (normalize(itemCase.answer) === normalize(userAnswer)) {

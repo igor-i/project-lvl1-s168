@@ -1,21 +1,15 @@
 import gamePlay from '..';
-import getRandomInt from './../lib';
+import { getRandomInt } from './../lib';
 
 const description = 'Answer "yes" if number even otherwise answer "no".';
 const minNum = 1;
-const maxNum = 10;
-
-const isEven = num => (num % 2) === 0;
-
-const question = () => getRandomInt(minNum, maxNum);
-const answer = num => (isEven(num) ? 'yes' : 'no');
+const maxNum = 11;
 
 const itemCaseGenerator = () => {
-  const q = question();
-  const a = answer(q);
+  const num = getRandomInt(minNum, maxNum);
   return {
-    question: q,
-    answer: a,
+    question: num,
+    answer: (num % 2) === 0 ? 'yes' : 'no',
   };
 };
 
