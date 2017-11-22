@@ -1,6 +1,6 @@
 {
   "name": "igor-i-brain-games",
-  "version": "1.0.0rc1",
+  "version": "1.0.0rc2",
   "description": "This is a Level 1 project in Hexlet.io",
   "main": "dist/index.js",
   "bin": {
