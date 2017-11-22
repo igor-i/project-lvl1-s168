@@ -1,7 +1,7 @@
 import gamePlay from '..';
-import { getRandomInt } from './../lib';
+import { getRandomInt } from '../lib';
 
-const description = 'If a number is a Prime?';
+const description = 'Is this number prime?';
 const minNum = 1;
 const maxNum = 99;
 

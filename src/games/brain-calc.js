@@ -1,5 +1,5 @@
 import gamePlay from '..';
-import { getRandomInt } from './../lib';
+import { getRandomInt } from '../lib';
 
 const description = 'What is the result of the expression?';
 const minNum = 1;

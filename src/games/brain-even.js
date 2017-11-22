@@ -1,5 +1,5 @@
 import gamePlay from '..';
-import { getRandomInt } from './../lib';
+import { getRandomInt } from '../lib';
 
 const description = 'Answer "yes" if number even otherwise answer "no".';
 const minNum = 1;

@@ -1,5 +1,5 @@
 import gamePlay from '..';
-import { getRandomInt, getMinOfArray, getMaxOfArray, sortNumsArray } from './../lib';
+import { getRandomInt, getMinOfArray, getMaxOfArray, sortNumsArray } from '../lib';
 
 const description = 'Balance the given number.';
 const minNum = 11;

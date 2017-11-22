@@ -1,5 +1,5 @@
 import gamePlay from '..';
-import { getRandomInt } from './../lib';
+import { getRandomInt } from '../lib';
 
 const description = 'What number is missing in this progression?';
 const minNum = 1;

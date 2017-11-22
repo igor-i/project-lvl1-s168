@@ -1,15 +1,14 @@
 install:
 	npm install
 
-start:
+build:
 	npm run build
-	npm run babel-node -- src/bin/brain-prime.js
+
+start:
+	npm run babel-node -- src/bin/brain-games.js
 
 publish:
 	npm publish
 
 lint:
 	npm run eslint .
-
-github:
-	git push -u origin master

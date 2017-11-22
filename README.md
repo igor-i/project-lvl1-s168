@@ -11,3 +11,9 @@ This is a Level 1 project in Hexlet.io
 ```
 make install
 ```
+
+## Run
+
+```
+brain-games
+```
