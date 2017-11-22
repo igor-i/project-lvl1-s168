@@ -25,10 +25,9 @@ const itemCaseGenerator = () => {
   const progArray = getProgressionArray();
   const skipKey = getRandomInt(0, progLength + 1);
   const a = progArray[skipKey];
-  progArray.splice(skipKey, 1, '..');
-
+  const q = progArray.map((value, key) => (key === skipKey ? '..' : value));
   return {
-    question: progArray.join(' '),
+    question: q.join(' '),
     answer: a,
   };
 };
