@@ -43,5 +43,16 @@
     "eslint": "^4.11.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "lcov"
+    ],
+    "testEnvironment": "node",
+    "verbose": true,
+    "modulePathIgnorePatterns": [
+      "<rootDir>/__tests__/__fixtures__"
+    ]
   }
 }
